@@ -2,8 +2,9 @@ public class ContainsDuplicateChar {
     public static boolean hasDuplicate(String str) {
         boolean result = false;
 
-        for (int i = 0; i < str.length(); i++) {
-            for (int j = 0; j < str.length(); j++) {
+        int strLen = str.length();
+        for (int i = 0; i < strLen; i++) {
+            for (int j = 0; j < strLen; j++) {
                 if (i != j && str.charAt(i) == str.charAt(j)) {
                     result = true;
                 }
@@ -18,8 +19,8 @@ public class ContainsDuplicateChar {
         String b = "Orange";
         String c = "";
 
-        System.out.println(hasDuplicate(a));
-        System.out.println(hasDuplicate(b));
-        System.out.println(hasDuplicate(c));
+        System.out.println('\'' + a + '\'' + " : " + hasDuplicate(a));
+        System.out.println('\'' + b + '\'' + " : " + hasDuplicate(b));
+        System.out.println('\'' + c + '\'' + " : " + hasDuplicate(c));
     }
 }
