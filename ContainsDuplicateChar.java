@@ -1,0 +1,25 @@
+public class ContainsDuplicateChar {
+    public static boolean hasDuplicate(String str) {
+        boolean result = false;
+
+        for (int i = 0; i < str.length(); i++) {
+            for (int j = 0; j < str.length(); j++) {
+                if (i != j && str.charAt(i) == str.charAt(j)) {
+                    result = true;
+                }
+            }
+        }
+
+        return result;
+    }
+
+    public static void main(String[] args) {
+        String a = "apple";
+        String b = "Orange";
+        String c = "";
+
+        System.out.println(hasDuplicate(a));
+        System.out.println(hasDuplicate(b));
+        System.out.println(hasDuplicate(c));
+    }
+}
