@@ -2,9 +2,8 @@ public class ContainsDuplicateChar {
     public static boolean hasDuplicate(String str) {
         boolean result = false;
 
-        int strLen = str.length();
-        for (int i = 0; i < strLen; i++) {
-            for (int j = 0; j < strLen; j++) {
+        for (int i = 0; i < str.length(); i++) {
+            for (int j = 0; j < str.length(); j++) {
                 if (i != j && str.charAt(i) == str.charAt(j)) {
                     result = true;
                 }
